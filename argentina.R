@@ -20,6 +20,8 @@ for (i in (1:ncolumn))
 
 }
 
+
+
 # Há algumas linhas com caracteres especiais em 'body_type' que não foram excluídas manipulando LibreOffice
 
 df[df$body_type == 'FurgÃ³n',]
@@ -83,5 +85,14 @@ p + geom_point()
 # O gráfico não ficou dos melhores também.
 # Há muitos valores de dinheiro baixos, mas não nulos, como 8000. Portanto, não podem ser retirados.
 
+
+# Boxplot do valor do carro pelo tipo de combustível
+p1 <- ggplot(df, aes(x = fuel_type, y = money, fill = fuel_type)) 
+p1 + geom_boxplot() + 
+  ggtitle('Valor do carro por tipo de combustível') + 
+  xlab('Combustível') + ylab('Valor') + 
+  labs(fill = 'Tipo de Combustível')
+
+# Possível perceber, sem muitas surpresas, que o carro híbrido é maior no que tange à preço.
 
 
