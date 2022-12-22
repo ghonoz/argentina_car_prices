@@ -96,3 +96,8 @@ p1 + geom_boxplot() +
 # Possível perceber, sem muitas surpresas, que o carro híbrido é maior no que tange à preço.
 
 
+
+# Transformar a coluna ano em fator para realizar gráficos com essa variável:
+
+
+
